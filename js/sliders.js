@@ -137,10 +137,10 @@ function initSliders() {
 				//modules: [Navigation, Pagination],
 				
 				//effect: 'fade',
-				autoplay: {
+				/*autoplay: {
 					delay: 3000,
 					disableOnInteraction: false,
-				},
+				},*/
 				observer: true,
 				observeParents: true,
 				slidesPerView: 4,
@@ -165,8 +165,8 @@ function initSliders() {
 				breakpoints: {
 					320: {
 						slidesPerView: 1,
-						spaceBetween: 0,
-						autoHeight: true,
+						spaceBetween: 20,
+						
 					},
 					576: {
 						slidesPerView: 2,
@@ -178,6 +178,63 @@ function initSliders() {
 					},
 					1370: {
 						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+				},
+				
+				on: {
+				
+				}
+			});
+		}
+		// Перечень слайдеров
+		if (document.querySelector('.products-new')) {
+			new Swiper('.products-new__slider', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				
+				//effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				observer: true,
+				observeParents: true,
+				slidesPerView: 3,
+				spaceBetween: 20,
+				parallax: true,
+				watchOverflow: true,
+				//autoHeight: true,
+				speed: 800,
+				//touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				// Dotts
+				pagination: {
+					el: '.products-new__dotts',
+					clickable: true,
+					dynamicBullets: true,
+				},
+				
+				
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					992: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					1330: {
+						slidesPerView: 3,
 						spaceBetween: 30,
 					},
 				},

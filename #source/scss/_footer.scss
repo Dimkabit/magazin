@@ -1,0 +1,131 @@
+.footer {
+	background-color: $mainDarkColor;
+
+	// .footer__text
+	&__text {
+		background: url('../img/footer/bg.jpg') top / cover no-repeat;
+	}
+
+	// .footer__container
+	&__container {
+	}
+
+	// .footer__body
+	&__body {
+	}
+}
+.text-footer {
+	padding-top: clamp(rem(40), 3.2vw, rem(60));
+	padding-bottom: clamp(rem(40), 3.2vw, rem(60));
+	// .text-footer__container
+	&__container {
+	}
+
+	// .text-footer__title
+	&__title {
+		text-align: center;
+		font-weight: bold;
+		font-size: clamp(rem(24), 1.6vw, rem(30));
+		line-height: clamp(rem(30), 2.5vw, rem(46));
+		color: $mainActionColor;
+		&:not(:last-child) {
+			margin-bottom: em(30, 30);
+		}
+	}
+
+	// .text-footer__text
+	&__text {
+		color: #fff;
+		font-size: clamp(rem(16), 0.95vw, rem(18));
+		line-height: clamp(rem(20), 1.45vw, rem(27));
+	}
+}
+
+
+
+//====================================================================================================
+
+.body-footer {
+	padding-top: clamp(rem(40), 5.3vw, rem(100));
+	padding-bottom: clamp(rem(40), 2.65vw, rem(50));
+	display: grid;
+	gap: clamp(rem(15), 1.85vw, rem(35));
+	// .body-footer__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		column-gap: rem(40);
+		row-gap: clamp(rem(20), 2.1vw, rem(40));
+		&:not(:last-child) {
+			padding: 0px 0px rem(30) 0px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	// .body-footer__item
+	&__item {
+	
+	}
+}
+.item-footer {
+
+	// .item-footer__spoller
+	&__spoller {
+	}
+}
+.spoller-item-footer {
+
+	// .spoller-item-footer__item
+	&__item {
+	}
+
+	// .spoller-item-footer__title
+	&__title {
+		text-transform: uppercase;
+		color: #fff;
+		background: $mainDarkColor;
+		font-weight: 600;
+		font-size: rem(18);
+		line-height: clamp(rem(18), 1.2vw, rem(22));
+		._spoller-init & {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			gap: rem(20);
+			&::after {
+				content: '\e900';
+				@extend %ic;
+				font-size: rem(8);
+			}
+		}
+	}
+
+	// .spoller-item-footer__body
+	&__body {
+		padding-top: clamp(rem(20), 1.6vw, rem(30));
+		padding-bottom: clamp(rem(20), 1.6vw, rem(30));
+	}
+}
+.menu-footer {
+
+	// .menu-footer__list
+	&__list {
+	}
+
+	// .menu-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: em(20, 18);
+		}
+	}
+
+	// .menu-footer__link
+	&__link {
+		line-height: clamp(rem(18), 1.45vw, rem(27));
+		color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+//====================================================================================================
+
