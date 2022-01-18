@@ -52,9 +52,23 @@ function documentActions(e) {
 	}
 }
 //==========================
+//подключение подсказок
 function initTippy() {
 	tippy('[data-tippy-content]', {
 
 	});
 }
 initTippy();
+
+//==========================
+if (document.querySelector('.filter-catalog__title')) {
+	document.querySelector('.filter-catalog__title').addEventListener('click', function (e) {
+		if (window.innerWidth < 992) {
+			document.querySelector('.filter-catalog__items').classList.toggle('_active');
+		}
+	});
+}
+
+//============================
+
+

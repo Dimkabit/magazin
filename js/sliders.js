@@ -244,6 +244,80 @@ function initSliders() {
 				}
 			});
 		}
+		// Перечень слайдеров
+		if (document.querySelector('.thumbs-images')) {
+			const thumbsSwiper = new Swiper('.thumbs-images', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				
+				//effect: 'fade',			
+				observer: true,
+				observeParents: true,
+				slidesPerView: 4,
+				spaceBetween: 16,
+				parallax: true,
+				watchOverflow: true,
+				//autoHeight: true,
+				speed: 800,
+				//touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				// Dotts
+				pagination: {
+					el: '.products-new__dotts',
+					clickable: true,
+					dynamicBullets: true,
+				},
+				
+				
+				breakpoints: {
+					992: {
+						slidesPerView: 2,
+					},
+					1330: {
+						slidesPerView: 4,
+						spaceBetween: 16,
+					},
+				},
+				
+				on: {
+				
+				}
+			});
+			new Swiper('.images-product__slider', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				//modules: [Navigation, Pagination],
+				
+				//effect: 'fade',
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				thumbs: {
+					swiper: thumbsSwiper
+				},
+				observer: true,
+				observeParents: true,
+				slidesPerView: 1,
+				spaceBetween: 20,
+				watchOverflow: true,
+				//autoHeight: true,
+				speed: 800,
+				//touchRatio: 0,
+				//simulateTouch: false,
+				loop: true,
+				//preloadImages: false,
+				//lazy: true,
+				
+				on: {
+				
+				}
+			});
+		}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

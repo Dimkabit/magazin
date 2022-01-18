@@ -2,6 +2,7 @@
 // Снипет (HTML): btn
 
 .button {
+	cursor: pointer;
 	display: inline-block;
 	padding: rem(10) rem(52);
 	background: $mainActionColor;
@@ -16,6 +17,24 @@
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: 0px 5px 25px rgba(232, 170, 49, 0.63);
+		}
+	}
+	&_border {
+		color: $mainActionColor;
+		background-color: $mainWhiteColor;
+		border: 1px solid $mainActionColor;
+		box-shadow: none;
+	}
+	&_black {
+		background-color: #000;
+		color: $mainWhiteColor;
+		font-size: rem(18);
+		padding: rem(10) rem(30);
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+			}
 		}
 	}
 }

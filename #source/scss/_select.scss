@@ -11,7 +11,7 @@
 		color: inherit;
 		text-align: left;
 		border: 1px solid #d9d9d9;
-		background-color: #fff;
+		background-color: #ffffff;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
@@ -21,7 +21,7 @@
 		display: flex;
 		align-items: center;
 		height: 30px;
-		padding: 0px 15px;
+		padding: 0px rem(15);
 		justify-content: space-between;
 		flex-direction: row-reverse;
 		&:before {
@@ -114,6 +114,34 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
+	}
+	&_control {
+		.select__title {
+			border: 1px solid #d9d9d9;
+			border-radius: 3px;
+		}
+		.select__value {
+			height: rem(40);
+			color: rgba(0, 0, 0, 0.5);
+			&::before {
+				font-size: rem(8);
+				@extend %ic;
+				content: '\e900';
+				margin-left: em(10, 8);
+			}
+		}
+		.select__content {
+			font-size: rem(16);
+		}
+		.select__option {
+			color: rgba(0, 0, 0, 0.5);
+			background: $mainWhiteColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: rgba(0, 0, 0, 1);
+				}
+			}
+		}
 	}
 }
 

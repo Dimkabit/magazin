@@ -317,7 +317,7 @@ spollers();
 			tabsBlock.addEventListener("click", setTabsAction);
 			initTabs(tabsBlock);
 		});
-
+		
 		// Получение табов с медиа запросами
 		const tabsMedia = Array.from(tabs).filter(function (item, index, self) {
 			return item.dataset.tabs;
@@ -461,6 +461,7 @@ spollers();
 		}
 	}
 }
+tabs();
 // Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
  function menuInit() {
 	let iconMenu = document.querySelector(".icon-menu");

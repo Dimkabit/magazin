@@ -1,13 +1,12 @@
 
 //====================================================================================================
-.header__top {
-	
-	
+.header__top {	
 }
+
 .top-header {
 	padding: rem(20) 0;
 	background-color: $mainDarkColor;
-	color: #fff;
+	color: $mainWhiteColor;
 }
 .top-header__container {
 	display: flex;
@@ -66,7 +65,7 @@
 .top-header__user {
 	display: inline-flex;
 	align-items: center;
-	color: #fff;
+	color: $mainWhiteColor;
 	line-height: 18px;
 	gap: em(15, 18);
 	position: relative;
@@ -102,26 +101,21 @@
 }
 
 .menu-top-header__list {
+	display: flex;
+	//для добавления большего количества меню
+	row-gap: rem(5); 
+	column-gap: calc(20px + (60 - 20) * ((100vw - 320px) / (1590 - 320)));//расчет при адаптиве
+	@media(max-width: $tablet) {
 		display: flex;
-		//для добавления большего количества меню
-		row-gap: rem(5); 
-		column-gap: calc(20px + (60 - 20) * ((100vw - 320px) / (1590 - 320)));//расчет при адаптиве
-		@media(max-width: $tablet) {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			row-gap: 25px;
-			font-size: rem(20);
-			}
-			
-		
+		flex-direction: column;
+		align-items: flex-start;
+		row-gap: 25px;
+		font-size: rem(20);
+		}		
 	}
-	
-		
-	
 	//.menu-top-header__link
 	.menu-top-header__link {
-		color: #fff;
+		color: $mainWhiteColor;
 		display: flex;
 		//font-size: 16px;
 		line-height: (20 / 16);
@@ -136,13 +130,11 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
-		color: #fff;
+		color: $mainWhiteColor;
 		& span {
 			white-space: nowrap;
 			font-family: $fontfamily;
 		}
-		
-		
 		&::before {
 			flex: 0 0 14px;
 			height: 14px;
@@ -153,8 +145,7 @@
 			font-size: rem(8);
 			transform: rotate(-90deg);
 			margin: 0px 0px 0px 30px;
-		}
-		
+		}	
 	}
 
 @media(max-width: $tablet) {
@@ -173,11 +164,9 @@
 }
 
 	.menu-top-header__link {
-		
 		&_catalog{
 			@media(min-width: $tablet) {
 				display: none;
-				
 			}
 		}
 	}
@@ -193,7 +182,6 @@
 .header {
 	
 	// .header__body
-
 	&__body {
 		
 	// .header__catalog
@@ -290,7 +278,6 @@
 .body-header {
 
 	// .body-header__actions
-
 	&__actions {
 		
 	}
@@ -306,7 +293,6 @@
 		display: none;
 	}
 	// .actions-header__location
-
 	&__location {
 		display: inline-flex;
 		align-items: center;
@@ -335,22 +321,19 @@
 	// .actions-header__phones
 
 	&__phones {
-		
 	}
 
 	// .actions-header__favorite
-
 	&__favorite {
 		position: relative;
 		z-index: 2;
 		font-size: rem(27);
 		@media(max-width: $tablet) {
-			color: #fff;
+			color: $mainWhiteColor;
 		}
 	}
 
 	// .actions-header__cart
-
 	&__cart {
 		flex: 0 0 auto;
 	}
@@ -359,7 +342,6 @@
 .phones-header {
 
 	// .phones-header__items
-
 	&__items {
 	}
 
@@ -381,14 +363,13 @@
 			display: none;
 		}
 		@media(max-width: $tablet) {
-			color: #fff;
+			color: $mainWhiteColor;
 			font-size: rem(20);
 		}
 		@media(max-width: $mobileSmall) {
 			&::before {
 				display: block;
 				font-size: rem(28);
-				
 			}
 			span {
 				display: none;
@@ -397,7 +378,6 @@
 	}
 
 	// .phones-header__arrow
-
 	&__arrow {
 		color: $mainActionColor;
 		font-size: rem(10);
@@ -408,11 +388,12 @@
 			display: none;
 		}
 	}
+
 	& ._spoller-active {
 		transform: rotate(-180deg);
 	}
-	// .phones-header__list
 
+	// .phones-header__list
 	&__list {
 		position: absolute;
 		text-align: center;
@@ -439,7 +420,6 @@
 	}
 
 	// .phones-header__callback
-
 	&__callback {
 		margin: rem(3) 0px 0px 0px;
 		font-weight: bold;
@@ -455,12 +435,13 @@
 		}
 	}
 }
+
 .cart-header {
 	display: flex;
 	column-gap: 15px;
 	align-items: center;
-	// .cart-header__icon
 
+	// .cart-header__icon
 	&__icon {
 		flex: 0 0 37px;
 		background: url('../icons/cart.svg');
@@ -476,7 +457,7 @@
 			width: rem(14);
 			height: rem(14);
 			background-color: $mainActionColor;
-			color: #fff;
+			color: $mainWhiteColor;
 			font-size: rem(8);
 			display: flex;
 			align-items: center;
@@ -494,7 +475,6 @@
 	}
 
 	// .cart-header__body
-
 	&__body {
 		font-size: rem(16);
 		line-height: (20/16);
@@ -505,7 +485,6 @@
 	}
 
 	// .cart-header__summ
-
 	&__summ {
 		font-weight: 500;
 		&:not(:last-child) {
@@ -514,7 +493,6 @@
 	}
 
 	// .cart-header__link
-
 	&__link {
 		color:$mainActionColor;
 		cursor: pointer;
@@ -529,7 +507,6 @@
 .header {
 	
 	// .header__catalog
-
 	&__catalog {
 		
 	}
@@ -537,16 +514,14 @@
 .catalog-header {
 	position: relative;
 	background-color: $mainDarkColor;
-	color: #fff;
+	color: $mainWhiteColor;
 	
 	// .catalog-header__container
-
 	&__container {
 		padding: 0;
 	}
 
 	// .catalog-header__menu
-
 	&__menu {
 		@media(max-width: $mobileSmall) {
 			padding: rem(20) 0;
@@ -557,9 +532,7 @@
 .menu-catalog {
 	
 	// .menu-catalog__list
-
 	&__list {
-		
 		display: flex;
 		column-gap: rem(10);
 		justify-content: space-between;
@@ -570,19 +543,16 @@
 	}
 
 	// .menu-catalog__item
-
-	&__item {
-		
+	&__item {	
 	}
 
 	// .menu-catalog__link
-
 	&__link {
 		display: flex;
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: (22 / 16);
-		color: #fff;
+		color: $mainWhiteColor;
 		position: relative;
 		transition: color 0.3s ease 0s;
 			&[data-parent] {
@@ -608,7 +578,6 @@
 			text-align: center;
 			min-height: rem(70);
 			padding: 0px rem(10);
-			
 		}
 		&::after {
 			content: '';
@@ -650,22 +619,21 @@
 	}
 
 	// .menu-catalog__sub-menu
-
 	&__sub-menu {
 		width: 100%;
 		left: 0;
 		top: 100%;
 		background-color: $mainDarkColor;
-		
 	}
+
 	&__back {
 		display: none;
 		background-color: $mainDarkColor;
-		color: #ECF1F2;
+		color: $mainWhiteColor;
 		font-size: rem(16);
 		
 		&::before {
-			color: #fff;
+			color: $mainWhiteColor;
 			margin: 0px em(13, 30) 0px 0px;
 		}
 		span {
@@ -719,11 +687,11 @@
 	&__back {
 		display: none;
 		background-color: $mainDarkColor;
-		color: #ECF1F2;
+		color: $mainWhiteColor;
 		font-size: rem(16);
 		padding-bottom: rem(25);
 		&::before {
-			color: #fff;
+			color: $mainWhiteColor;
 			margin: 0px em(13, 30) 0px 0px;
 		}
 		span {
@@ -847,8 +815,6 @@
 		}
 	}
 }
-
-
 
 //=====================================================================
 

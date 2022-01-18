@@ -1,3 +1,8 @@
+const formsModules = {
+	inputMaskModule: null,
+	selectModule: null
+};
+
 function formFieldsInit() {
 	const formFields = document.querySelectorAll('input[placeholder],textarea[placeholder]');
 	if (formFields.length) {
@@ -184,7 +189,7 @@ function formFieldsInit() {
 		}
 	}
 }
-formSubmit(true);
+
 
 /* Маски для полей (в работе) */
 function formMasks(logging) {
@@ -194,11 +199,11 @@ function formMasks(logging) {
 }
 
 /* Модуль работы с select */
-function formSelect(logging) {
+/*function formSelect(logging) {
 	formsModules.selectModule = new SelectConstructor({
 		logging: logging
 	});
-}
+}*/
 
 /* Модуь формы "показать пароль" */
 function formViewpass() {
@@ -228,5 +233,8 @@ function formQuantity() {
 		}
 	});
 }
-formQuantity();
+
 formFieldsInit();
+formFieldsInit();
+formSubmit(true);
+formQuantity();
